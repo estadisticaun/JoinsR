@@ -1,0 +1,136 @@
+---
+title: "Plataformas Tecnológicas Para la Gestión de Datos"
+subtitle: "Una mirada desde lo público"
+author: "<br/><br/>Alberto Rodríguez R <br/><br/>Departamento Administrativo de la Función Pública-DAFP<br/><br/>Dirección Nacional de Planeación y Estadística<br/>Universidad Nacional de Colombia"
+#institute: "Universidad Nacional de Colombia"
+date: "`r Sys.Date()`"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      ratio: 14:9
+    # includes:
+    #   after_body: libs/unal/html/scripts.html
+    #   in_header: libs/unal/html/style.html    
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE,  htmltools.preserve.raw = FALSE)
+```
+
+
+
+<!-- Uso de funcionalidades de xaringan extras -->
+
+```{r xaringan-panelset, echo=FALSE}
+xaringanExtra::use_panelset()
+```
+
+```{r xaringan-scribble, echo=FALSE}
+xaringanExtra::use_scribble()
+```
+
+```{r xaringan-webcam, include = FALSE}
+xaringanExtra::use_webcam()
+```
+
+```{r xaringan-logo, echo=FALSE}
+xaringanExtra::use_logo(
+  image_url = "https://raw.githubusercontent.com/estadisticaun/TendenciasCSU/master/Imagenes/LOGOSIMBOLO%20LATERAL.png", width = "115px",
+  height = "133px")
+```
+
+```{r echo=FALSE}
+xaringanExtra::style_panelset_tabs(
+  active_foreground = "#0051BA",
+  hover_foreground = "#d22",
+  font_family = "Roboto"
+)
+```
+
+
+<!-- INICIO DE LA PRESENTACIÓN -->
+
+## Consideraciones para el uso adecuado de la presentación
+
+  1.	<p align="justify">Dar click en la letra <b>H</b> o en el símbolo <b>?</b> para desplegar las distintas <b>opciones de navegación</b> que ofrece la presentación.</p>
+  
+  2.	<p align="justify">Si uno o más objetos gráficos presentan algún grado de desconfiguración/deformación, recargar las presentación dando click en la tecla  <b>F5</b> si nos encontramos en un PC o directamente desde la barra del navegador.</p>
+
+---
+## Contenido
+
+<br>
+
+1. <p align="justify">**Una premisa**
+<br>
+2. <p align="justify">**¿Cuáles son los beneficios de contar y de gestionar las herramientas tecnológicas en el contexto de los datos?**
+<br>
+3. <p align="justify">**En el contexto de lo público, ¿cuáles herramientas y plataformas tecnológicas se requieren para la gestión moderna de los datos?**
+<br>
+4. <p align="justify">**En el contexto de lo público, ¿qué aspectos debemos tener en cuenta para adquirir y gestionar las plataformas tecnológicas orientadas a la gestión moderna de los datos?**
+
+---
+class: inverse, center, middle
+
+# Una premisa
+
+---
+### Un riesgo para la gestión de la información cuantitativa en las entidades públicas
+<h4 style="color:Red;">¡La tecnología como fin y no como medio!</h4>
+<br>
+
+---
+class: inverse, center, middle
+
+# ¿Cuáles son los beneficios de contar y de gestionar las herramientas tecnológicas en el contexto de los datos?
+
+---
+# Posibilidades que nos ofrece la gestión moderna de las herramientas tecnológicas
+
+Somos una generación privilegiada dada las posibilidades que nos ofrecen las TIC. En el contexto de los datos y su gestión en el ámbito de lo público, sólo por presentar algunos ejemplos, estas herramientas nos sirven para:
+
+
+
+1. Presentar/visualizar información de estadísticas e indicadores
+
+2. Construir boletines estadísticos interactivos
+
+3. Construir y disponer libros
+
+4. Realizar presentaciones
+
+5. realizar investigaciones desde diversas perspectivas
+
+6. Lo más importante, disponer en la web todo el conocimiento contenido en los datos institucionales (transparencia)
+
+
+---
+### Posibilidades de cruces de bases de datos en R con dplyr
+
+.panelset.sideways[
+
+.panel[.panel-name[`1. left_joint`]
+![](Gif/left-join.gif)
+]
+
+.panel[.panel-name[`1. left_joint`]
+![](Gif/left-join-extra.gif)
+]
+.panel[.panel-name[`2. right_join`]
+![](Gif/right-join.gif)
+]
+.panel[.panel-name[`3. full_join`]
+![](Gif/full-join.gif)
+]
+.panel[.panel-name[`4. inner_join`]
+![](Gif/inner-join.gif)
+]
+.panel[.panel-name[`5. anti_join`]
+![](Gif/anti-join.gif)
+]
+]
+

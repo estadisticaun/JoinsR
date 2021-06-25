@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Plataformas Tecnológicas Para la Gestión de Datos</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="  Alberto Rodríguez R   Departamento Administrativo de la Función Pública-DAFP  Dirección Nacional de Planeación y Estadística Universidad Nacional de Colombia" />
+    <meta name="date" content="2021-06-25" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <link href="libs/remark-css/default.css" rel="stylesheet" />
+    <link href="libs/remark-css/default-fonts.css" rel="stylesheet" />
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <script src="libs/fabric/fabric.min.js"></script>
+    <link href="libs/xaringanExtra-scribble/scribble.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-scribble/scribble.js"></script>
+    <script>document.addEventListener('DOMContentLoaded', function() { window.xeScribble = new Scribble({"pen_color":["#FF0000"],"pen_size":3,"eraser_size":30,"palette":[]}) })</script>
+    <script src="libs/xaringanExtra-webcam/webcam.js"></script>
+    <script id="xaringanExtra-webcam-options" type="application/json">{"width":"200","height":"200","margin":"1em"}</script>
+  </head>
+  <body>
+    <textarea id="source">
+class: center, middle, inverse, title-slide
+
+# Plataformas Tecnológicas Para la Gestión de Datos
+## Una mirada desde lo público
+### <br/><br/>Alberto Rodríguez R <br/><br/>Departamento Administrativo de la Función Pública-DAFP<br/><br/>Dirección Nacional de Planeación y Estadística<br/>Universidad Nacional de Colombia
+### 2021-06-25
+
+---
+
+
+
+
+
+
+&lt;!-- Uso de funcionalidades de xaringan extras --&gt;
+
+
+
+
+
+
+
+<div>
+<style type="text/css">.xaringan-extra-logo {
+width: 115px;
+height: 133px;
+z-index: 0;
+background-image: url(https://raw.githubusercontent.com/estadisticaun/TendenciasCSU/master/Imagenes/LOGOSIMBOLO%20LATERAL.png);
+background-size: contain;
+background-repeat: no-repeat;
+position: absolute;
+top:1em;right:1em;
+}
+</style>
+<script>(function () {
+  let tries = 0
+  function addLogo () {
+    if (typeof slideshow === 'undefined') {
+      tries += 1
+      if (tries < 10) {
+        setTimeout(addLogo, 100)
+      }
+    } else {
+      document.querySelectorAll('.remark-slide-content:not(.title-slide):not(.inverse):not(.hide_logo)')
+        .forEach(function (slide) {
+          const logo = document.createElement('div')
+          logo.classList = 'xaringan-extra-logo'
+          logo.href = null
+          slide.appendChild(logo)
+        })
+    }
+  }
+  document.addEventListener('DOMContentLoaded', addLogo)
+})()</script>
+</div>
+
+<style>.panelset{--panel-tab-active-foreground: #0051BA;--panel-tab-hover-foreground: #d22;--panel-tab-font-family: Roboto;}</style>
+
+
+&lt;!-- INICIO DE LA PRESENTACIÓN --&gt;
+
+## Consideraciones para el uso adecuado de la presentación
+
+  1.	&lt;p align="justify"&gt;Dar click en la letra &lt;b&gt;H&lt;/b&gt; o en el símbolo &lt;b&gt;?&lt;/b&gt; para desplegar las distintas &lt;b&gt;opciones de navegación&lt;/b&gt; que ofrece la presentación.&lt;/p&gt;
+  
+  2.	&lt;p align="justify"&gt;Si uno o más objetos gráficos presentan algún grado de desconfiguración/deformación, recargar las presentación dando click en la tecla  &lt;b&gt;F5&lt;/b&gt; si nos encontramos en un PC o directamente desde la barra del navegador.&lt;/p&gt;
+
+---
+## Contenido
+
+&lt;br&gt;
+
+1. &lt;p align="justify"&gt;**Una premisa**
+&lt;br&gt;
+2. &lt;p align="justify"&gt;**¿Cuáles son los beneficios de contar y de gestionar las herramientas tecnológicas en el contexto de los datos?**
+&lt;br&gt;
+3. &lt;p align="justify"&gt;**En el contexto de lo público, ¿cuáles herramientas y plataformas tecnológicas se requieren para la gestión moderna de los datos?**
+&lt;br&gt;
+4. &lt;p align="justify"&gt;**En el contexto de lo público, ¿qué aspectos debemos tener en cuenta para adquirir y gestionar las plataformas tecnológicas orientadas a la gestión moderna de los datos?**
+
+---
+class: inverse, center, middle
+
+# Una premisa
+
+---
+### Un riesgo para la gestión de la información cuantitativa en las entidades públicas
+&lt;h4 style="color:Red;"&gt;¡La tecnología como fin y no como medio!&lt;/h4&gt;
+&lt;br&gt;
+
+---
+class: inverse, center, middle
+
+# ¿Cuáles son los beneficios de contar y de gestionar las herramientas tecnológicas en el contexto de los datos?
+
+---
+# Posibilidades que nos ofrece la gestión moderna de las herramientas tecnológicas
+
+Somos una generación privilegiada dada las posibilidades que nos ofrecen las TIC. En el contexto de los datos y su gestión en el ámbito de lo público, sólo por presentar algunos ejemplos, estas herramientas nos sirven para:
+
+
+
+1. Presentar/visualizar información de estadísticas e indicadores
+
+2. Construir boletines estadísticos interactivos
+
+3. Construir y disponer libros
+
+4. Realizar presentaciones
+
+5. realizar investigaciones desde diversas perspectivas
+
+6. Lo más importante, disponer en la web todo el conocimiento contenido en los datos institucionales (transparencia)
+
+
+---
+### Posibilidades de cruces de bases de datos en R con dplyr
+
+.panelset.sideways[
+
+.panel[.panel-name[`1. left_joint`]
+![](Gif/left-join.gif)
+]
+
+.panel[.panel-name[`1. left_joint`]
+![](Gif/left-join-extra.gif)
+]
+.panel[.panel-name[`2. right_join`]
+![](Gif/right-join.gif)
+]
+.panel[.panel-name[`3. full_join`]
+![](Gif/full-join.gif)
+]
+.panel[.panel-name[`4. inner_join`]
+![](Gif/inner-join.gif)
+]
+.panel[.panel-name[`5. anti_join`]
+![](Gif/anti-join.gif)
+]
+]
+
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"highlightStyle": "github",
+"highlightLines": true,
+"countIncrementalSlides": false,
+"ratio": "14:9"
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>
