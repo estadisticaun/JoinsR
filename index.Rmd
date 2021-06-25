@@ -1,8 +1,7 @@
 ---
-title: "Plataformas Tecnológicas Para la Gestión de Datos"
-subtitle: "Una mirada desde lo público"
-author: "<br/><br/>Alberto Rodríguez R <br/><br/>Departamento Administrativo de la Función Pública-DAFP<br/><br/>Dirección Nacional de Planeación y Estadística<br/>Universidad Nacional de Colombia"
-#institute: "Universidad Nacional de Colombia"
+title: "Combinación de tablas en R con dplyr"
+author: "Alberto Rodríguez R"
+institute: "Universidad Nacional de Colombia"
 date: "`r Sys.Date()`"
 output:
   xaringan::moon_reader:
@@ -58,79 +57,94 @@ xaringanExtra::style_panelset_tabs(
 
   1.	<p align="justify">Dar click en la letra <b>H</b> o en el símbolo <b>?</b> para desplegar las distintas <b>opciones de navegación</b> que ofrece la presentación.</p>
   
-  2.	<p align="justify">Si uno o más objetos gráficos presentan algún grado de desconfiguración/deformación, recargar las presentación dando click en la tecla  <b>F5</b> si nos encontramos en un PC o directamente desde la barra del navegador.</p>
-
----
-## Contenido
-
-<br>
-
-1. <p align="justify">**Una premisa**
-<br>
-2. <p align="justify">**¿Cuáles son los beneficios de contar y de gestionar las herramientas tecnológicas en el contexto de los datos?**
-<br>
-3. <p align="justify">**En el contexto de lo público, ¿cuáles herramientas y plataformas tecnológicas se requieren para la gestión moderna de los datos?**
-<br>
-4. <p align="justify">**En el contexto de lo público, ¿qué aspectos debemos tener en cuenta para adquirir y gestionar las plataformas tecnológicas orientadas a la gestión moderna de los datos?**
-
 ---
 class: inverse, center, middle
 
-# Una premisa
+# Combinar variables
 
 ---
-### Un riesgo para la gestión de la información cuantitativa en las entidades públicas
-<h4 style="color:Red;">¡La tecnología como fin y no como medio!</h4>
-<br>
-
----
-class: inverse, center, middle
-
-# ¿Cuáles son los beneficios de contar y de gestionar las herramientas tecnológicas en el contexto de los datos?
-
----
-# Posibilidades que nos ofrece la gestión moderna de las herramientas tecnológicas
-
-Somos una generación privilegiada dada las posibilidades que nos ofrecen las TIC. En el contexto de los datos y su gestión en el ámbito de lo público, sólo por presentar algunos ejemplos, estas herramientas nos sirven para:
-
-
-
-1. Presentar/visualizar información de estadísticas e indicadores
-
-2. Construir boletines estadísticos interactivos
-
-3. Construir y disponer libros
-
-4. Realizar presentaciones
-
-5. realizar investigaciones desde diversas perspectivas
-
-6. Lo más importante, disponer en la web todo el conocimiento contenido en los datos institucionales (transparencia)
-
-
----
-### Posibilidades de cruces de bases de datos en R con dplyr
+### Posibilidades de cruces de bases de datos en R con dplyr - por variables
 
 .panelset.sideways[
 
-.panel[.panel-name[`1. left_joint`]
-![](Gif/left-join.gif)
+.panel[.panel-name[`Filosofía al cruzar bases de datos <br><br> <FONT COLOR="#e34a33">La familia Join </FONT>`]
+
+<H5><u>Propósito</u></H5>
+<p align="justify"><FONT SIZE=3> Un cruce de bases de datos en R permite la combinación de las variables existentes en dos conjuntos de datos. Primero hace coincidir las observaciones por sus claves (llaves), luego copia las variables de una tabla a la otra.</font>
+
+```{r gif1, fig.align='center', out.width='65%', fig.show='hold', echo=FALSE}
+knitr::include_graphics('Gif/original-dfs.png')
+```
+
+<font size=1>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font> 
 ]
 
 .panel[.panel-name[`1. left_joint`]
-![](Gif/left-join-extra.gif)
+<H5><u>Propósito</u></H5>
+<p align="justify"><FONT SIZE=3>Todas las filas de x y todas las columnas de y en x. Las filas en x sin coincidencia en y tendrán valores NA en las nuevas columnas.
+```{r gif2, fig.align='center', out.width='55%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/left-join.gif')
+```
+<font size=1>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
+]
+
+.panel[.panel-name[`1. left_joint`]
+<H5><u>Propósito</u></H5>
+<p align="justify"><FONT SIZE=3>Si hay varias coincidencias entre x e y, se devuelven todas las combinaciones de las coincidencias.
+
+```{r gif3, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/left-join-extra.gif')
+```
+<font size=1>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
 ]
 .panel[.panel-name[`2. right_join`]
-![](Gif/right-join.gif)
+<H5><u>Propósito</u></H5>
+<p align="justify"><FONT SIZE=3>Todas las filas de y, y todas las columnas de x en y. Las filas en y sin coincidencia en x tendrán valores NA en las nuevas columnas.
+```{r gif4, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/right-join.gif')
+```
+<font size=1>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
 ]
 .panel[.panel-name[`3. full_join`]
-![](Gif/full-join.gif)
+<H5><u>Propósito</u></H5>
+<p align="justify"><FONT SIZE=3> Todas las filas y todas las columnas de x e y. Donde no hay valores coincidentes, devuelve NA para el que falta.
+```{r gif5, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/full-join.gif')
+```
+
+<font size=1>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
 ]
 .panel[.panel-name[`4. inner_join`]
-![](Gif/inner-join.gif)
+<H5><u>Propósito</u></H5>
+<p align="justify"><FONT SIZE=3>Todas las filas de x donde hay valores coincidentes en y, y todas las columnas de x e y.
+```{r gif6, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/inner-join.gif')
+```
+
+<font size=1>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
 ]
-.panel[.panel-name[`5. anti_join`]
-![](Gif/anti-join.gif)
+.panel[.panel-name[`5. semi_join`]
+<H5><u>Propósito</u></H5>
+<p align="justify"><FONT SIZE=3>Todas las filas de x donde hay valores coincidentes en y, manteniendo solo las columnas de x.
+```{r gif7, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/semi-join.gif')
+```
+
+<font size=1>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
+]
+
+.panel[.panel-name[`6. anti_join`]
+<H5><u>Propósito</u></H5>
+<p align="justify"><FONT SIZE=3>Todas las filas de x donde no hay valores coincidentes en y, manteniendo solo las columnas de x.
+```{r gif8, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/anti-join.gif')
+```
+
+<font size=1>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
 ]
 ]
 
+---
+class: inverse, center, middle
+
+# Combinar individuos/casos

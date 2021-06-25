@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Plataformas Tecnológicas Para la Gestión de Datos</title>
+    <title>Combinación de tablas en R con dplyr</title>
     <meta charset="utf-8" />
-    <meta name="author" content="  Alberto Rodríguez R   Departamento Administrativo de la Función Pública-DAFP  Dirección Nacional de Planeación y Estadística Universidad Nacional de Colombia" />
+    <meta name="author" content="Alberto Rodríguez R" />
     <meta name="date" content="2021-06-25" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
@@ -21,9 +21,9 @@
     <textarea id="source">
 class: center, middle, inverse, title-slide
 
-# Plataformas Tecnológicas Para la Gestión de Datos
-## Una mirada desde lo público
-### <br/><br/>Alberto Rodríguez R <br/><br/>Departamento Administrativo de la Función Pública-DAFP<br/><br/>Dirección Nacional de Planeación y Estadística<br/>Universidad Nacional de Colombia
+# Combinación de tablas en R con dplyr
+### Alberto Rodríguez R
+### Universidad Nacional de Colombia
 ### 2021-06-25
 
 ---
@@ -84,82 +84,81 @@ top:1em;right:1em;
 
   1.	&lt;p align="justify"&gt;Dar click en la letra &lt;b&gt;H&lt;/b&gt; o en el símbolo &lt;b&gt;?&lt;/b&gt; para desplegar las distintas &lt;b&gt;opciones de navegación&lt;/b&gt; que ofrece la presentación.&lt;/p&gt;
   
-  2.	&lt;p align="justify"&gt;Si uno o más objetos gráficos presentan algún grado de desconfiguración/deformación, recargar las presentación dando click en la tecla  &lt;b&gt;F5&lt;/b&gt; si nos encontramos en un PC o directamente desde la barra del navegador.&lt;/p&gt;
-
----
-## Contenido
-
-&lt;br&gt;
-
-1. &lt;p align="justify"&gt;**Una premisa**
-&lt;br&gt;
-2. &lt;p align="justify"&gt;**¿Cuáles son los beneficios de contar y de gestionar las herramientas tecnológicas en el contexto de los datos?**
-&lt;br&gt;
-3. &lt;p align="justify"&gt;**En el contexto de lo público, ¿cuáles herramientas y plataformas tecnológicas se requieren para la gestión moderna de los datos?**
-&lt;br&gt;
-4. &lt;p align="justify"&gt;**En el contexto de lo público, ¿qué aspectos debemos tener en cuenta para adquirir y gestionar las plataformas tecnológicas orientadas a la gestión moderna de los datos?**
-
 ---
 class: inverse, center, middle
 
-# Una premisa
+# Combinar variables
 
 ---
-### Un riesgo para la gestión de la información cuantitativa en las entidades públicas
-&lt;h4 style="color:Red;"&gt;¡La tecnología como fin y no como medio!&lt;/h4&gt;
-&lt;br&gt;
-
----
-class: inverse, center, middle
-
-# ¿Cuáles son los beneficios de contar y de gestionar las herramientas tecnológicas en el contexto de los datos?
-
----
-# Posibilidades que nos ofrece la gestión moderna de las herramientas tecnológicas
-
-Somos una generación privilegiada dada las posibilidades que nos ofrecen las TIC. En el contexto de los datos y su gestión en el ámbito de lo público, sólo por presentar algunos ejemplos, estas herramientas nos sirven para:
-
-
-
-1. Presentar/visualizar información de estadísticas e indicadores
-
-2. Construir boletines estadísticos interactivos
-
-3. Construir y disponer libros
-
-4. Realizar presentaciones
-
-5. realizar investigaciones desde diversas perspectivas
-
-6. Lo más importante, disponer en la web todo el conocimiento contenido en los datos institucionales (transparencia)
-
-
----
-### Posibilidades de cruces de bases de datos en R con dplyr
+### Posibilidades de cruces de bases de datos en R con dplyr - por variables
 
 .panelset.sideways[
 
-.panel[.panel-name[`1. left_joint`]
-![](Gif/left-join.gif)
+.panel[.panel-name[`Filosofía al cruzar bases de datos &lt;br&gt;&lt;br&gt; &lt;FONT COLOR="#e34a33"&gt;La familia Join &lt;/FONT&gt;`]
+
+&lt;H5&gt;&lt;u&gt;Propósito&lt;/u&gt;&lt;/H5&gt;
+&lt;p align="justify"&gt;&lt;FONT SIZE=3&gt; Un cruce de bases de datos en R permite la combinación de las variables existentes en dos conjuntos de datos. Primero hace coincidir las observaciones por sus claves (llaves), luego copia las variables de una tabla a la otra.&lt;/font&gt;
+
+&lt;img src="Gif/original-dfs.png" width="65%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size=1&gt;Disponible en: &lt;a href="https://github.com/gadenbuie/tidyexplain#semi-join"&gt;https://github.com/gadenbuie/tidyexplain#semi-join&lt;/a&gt;&lt;/font&gt; 
 ]
 
 .panel[.panel-name[`1. left_joint`]
-![](Gif/left-join-extra.gif)
+&lt;H5&gt;&lt;u&gt;Propósito&lt;/u&gt;&lt;/H5&gt;
+&lt;p align="justify"&gt;&lt;FONT SIZE=3&gt;Todas las filas de x y todas las columnas de y en x. Las filas en x sin coincidencia en y tendrán valores NA en las nuevas columnas.
+&lt;img src="Gif/left-join.gif" width="55%" style="display: block; margin: auto;" /&gt;
+&lt;font size=1&gt;Disponible en: &lt;a href="https://github.com/gadenbuie/tidyexplain#semi-join"&gt;https://github.com/gadenbuie/tidyexplain#semi-join&lt;/a&gt;&lt;/font&gt;
+]
+
+.panel[.panel-name[`1. left_joint`]
+&lt;H5&gt;&lt;u&gt;Propósito&lt;/u&gt;&lt;/H5&gt;
+&lt;p align="justify"&gt;&lt;FONT SIZE=3&gt;Si hay varias coincidencias entre x e y, se devuelven todas las combinaciones de las coincidencias.
+
+&lt;img src="Gif/left-join-extra.gif" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;font size=1&gt;Disponible en: &lt;a href="https://github.com/gadenbuie/tidyexplain#semi-join"&gt;https://github.com/gadenbuie/tidyexplain#semi-join&lt;/a&gt;&lt;/font&gt;
 ]
 .panel[.panel-name[`2. right_join`]
-![](Gif/right-join.gif)
+&lt;H5&gt;&lt;u&gt;Propósito&lt;/u&gt;&lt;/H5&gt;
+&lt;p align="justify"&gt;&lt;FONT SIZE=3&gt;Todas las filas de y, y todas las columnas de x en y. Las filas en y sin coincidencia en x tendrán valores NA en las nuevas columnas.
+&lt;img src="Gif/right-join.gif" width="50%" style="display: block; margin: auto;" /&gt;
+&lt;font size=1&gt;Disponible en: &lt;a href="https://github.com/gadenbuie/tidyexplain#semi-join"&gt;https://github.com/gadenbuie/tidyexplain#semi-join&lt;/a&gt;&lt;/font&gt;
 ]
 .panel[.panel-name[`3. full_join`]
-![](Gif/full-join.gif)
+&lt;H5&gt;&lt;u&gt;Propósito&lt;/u&gt;&lt;/H5&gt;
+&lt;p align="justify"&gt;&lt;FONT SIZE=3&gt; Todas las filas y todas las columnas de x e y. Donde no hay valores coincidentes, devuelve NA para el que falta.
+&lt;img src="Gif/full-join.gif" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size=1&gt;Disponible en: &lt;a href="https://github.com/gadenbuie/tidyexplain#semi-join"&gt;https://github.com/gadenbuie/tidyexplain#semi-join&lt;/a&gt;&lt;/font&gt;
 ]
 .panel[.panel-name[`4. inner_join`]
-![](Gif/inner-join.gif)
+&lt;H5&gt;&lt;u&gt;Propósito&lt;/u&gt;&lt;/H5&gt;
+&lt;p align="justify"&gt;&lt;FONT SIZE=3&gt;Todas las filas de x donde hay valores coincidentes en y, y todas las columnas de x e y.
+&lt;img src="Gif/inner-join.gif" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size=1&gt;Disponible en: &lt;a href="https://github.com/gadenbuie/tidyexplain#semi-join"&gt;https://github.com/gadenbuie/tidyexplain#semi-join&lt;/a&gt;&lt;/font&gt;
 ]
-.panel[.panel-name[`5. anti_join`]
-![](Gif/anti-join.gif)
+.panel[.panel-name[`5. semi_join`]
+&lt;H5&gt;&lt;u&gt;Propósito&lt;/u&gt;&lt;/H5&gt;
+&lt;p align="justify"&gt;&lt;FONT SIZE=3&gt;Todas las filas de x donde hay valores coincidentes en y, manteniendo solo las columnas de x.
+&lt;img src="Gif/semi-join.gif" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size=1&gt;Disponible en: &lt;a href="https://github.com/gadenbuie/tidyexplain#semi-join"&gt;https://github.com/gadenbuie/tidyexplain#semi-join&lt;/a&gt;&lt;/font&gt;
+]
+
+.panel[.panel-name[`6. anti_join`]
+&lt;H5&gt;&lt;u&gt;Propósito&lt;/u&gt;&lt;/H5&gt;
+&lt;p align="justify"&gt;&lt;FONT SIZE=3&gt;Todas las filas de x donde no hay valores coincidentes en y, manteniendo solo las columnas de x.
+&lt;img src="Gif/anti-join.gif" width="50%" style="display: block; margin: auto;" /&gt;
+
+&lt;font size=1&gt;Disponible en: &lt;a href="https://github.com/gadenbuie/tidyexplain#semi-join"&gt;https://github.com/gadenbuie/tidyexplain#semi-join&lt;/a&gt;&lt;/font&gt;
 ]
 ]
 
+---
+class: inverse, center, middle
+
+# Combinar individuos/casos
     </textarea>
 <style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
 <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
