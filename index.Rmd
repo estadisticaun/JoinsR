@@ -148,3 +148,86 @@ knitr:: include_graphics('Gif/anti-join.gif')
 class: inverse, center, middle
 
 # Combinar individuos/casos
+
+---
+### Posibilidades adición de bases de datos en R con dplyr - por individuos
+
+.panelset.sideways[
+
+.panel[.panel-name[`Filosofía al adicionar individuos <br><br> <FONT COLOR="#e34a33">Operaciones con conjuntos</FONT>`]
+
+<H5><u>Propósito</u></H5>
+
+```{r gif9, fig.align='center', out.width='65%', fig.show='hold', echo=FALSE}
+knitr::include_graphics('Gif/original-dfs-set-ops.png')
+```
+
+<font size=2>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font> 
+]
+
+.panel[.panel-name[`1. bind_rows`]
+<H5><u>Propósito</u></H5>
+
+]
+
+.panel[.panel-name[`2. union(x, y)`]
+<H5><u>Propósito</u></H5>
+
+```{r gif10, fig.align='center', out.width='55%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/union.gif')
+```
+<font size=2>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
+]
+
+.panel[.panel-name[`3. union(y, x)`]
+<H5><u>Propósito</u></H5>
+
+
+```{r gif11, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/union-rev.gif')
+```
+<font size=2>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
+]
+.panel[.panel-name[`4. union_all`]
+<H5><u>Propósito</u></H5>
+
+```{r gif12, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/union-all.gif')
+```
+<font size=2>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
+]
+.panel[.panel-name[`5. intersection`]
+<H5><u>Propósito</u></H5>
+
+```{r gif13, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/intersect.gif')
+```
+
+<font size=2>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
+]
+.panel[.panel-name[`6. setdiff(x, y)`]
+<H5><u>Propósito</u></H5>
+
+```{r gif14, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/setdiff.gif')
+```
+
+<font size=2>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
+]
+.panel[.panel-name[`7. setdiff(y, x)`]
+<H5><u>Propósito</u></H5>
+
+```{r gif15, fig.align='center', out.width='50%', fig.show='hold', echo=FALSE}
+knitr:: include_graphics('Gif/setdiff-rev.gif')
+```
+
+<font size=2>Disponible en: <a href="https://github.com/gadenbuie/tidyexplain#semi-join">https://github.com/gadenbuie/tidyexplain#semi-join</a></font>
+]
+]
+
+---
+### Más información sobre transformación de datos con dplyr en:
+
+Descargar [Cheat Sheets de dplyr](https://github.com/rstudio/cheatsheets/raw/master/data-transformation.pdf)
+
+
